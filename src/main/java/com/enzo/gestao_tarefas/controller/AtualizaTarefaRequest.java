@@ -1,4 +1,4 @@
-package com.enzo.gestao_tarefas.controller.dto;
+package com.enzo.gestao_tarefas.controller;
 
 import jakarta.validation.constraints.NotBlank;
 

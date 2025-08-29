@@ -1,4 +1,4 @@
-package com.enzo.gestao_tarefas.controller.dto;
+package com.enzo.gestao_tarefas.controller;
 
 import com.enzo.gestao_tarefas.model.Usuario;
 import com.enzo.gestao_tarefas.repository.UsuarioRepository;
