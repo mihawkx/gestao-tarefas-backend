@@ -1,6 +1,6 @@
-package com.enzo.gestao_tarefas.repository;
+package com.enzo.gestao_tarefas.repositories;
 
-import com.enzo.gestao_tarefas.model.Usuario;
+import com.enzo.gestao_tarefas.domain.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.enzo.gestao_tarefas.model;
+package com.enzo.gestao_tarefas.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

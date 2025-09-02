@@ -1,7 +1,11 @@
+<<<<<<<< Updated upstream:src/main/java/com/enzo/gestao_tarefas/UsuarioController.java
 package com.enzo.gestao_tarefas.controller;
+========
+package com.enzo.gestao_tarefas.controllers;
+>>>>>>>> Stashed changes:src/main/java/com/enzo/gestao_tarefas/controllers/UsuarioController.java
 
-import com.enzo.gestao_tarefas.model.Usuario;
-import com.enzo.gestao_tarefas.repository.UsuarioRepository;
+import com.enzo.gestao_tarefas.domain.Usuario;
+import com.enzo.gestao_tarefas.repositories.UsuarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +21,6 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity<Usuario> criar(@Valid @RequestBody Usuario u){
-        // criptografar senha com BCrypt quando adicionar autorização
         return ResponseEntity.ok(repo.save(u));
     }
 
