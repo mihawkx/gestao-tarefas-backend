@@ -1,4 +1,4 @@
 package com.enzo.gestao_tarefas.dto;
 
-public record TarefaDTO(String id, String titulo, String descricao, String status, String usuarioId) {}
+public record TarefaDTO(Long id, String titulo, String descricao, String status, Long usuarioId) {}
 

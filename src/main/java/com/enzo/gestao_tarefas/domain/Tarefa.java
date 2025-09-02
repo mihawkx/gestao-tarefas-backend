@@ -14,8 +14,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Tarefa {
-    @Id @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long  id;
     private String titulo;
     private String descricao;
     private String status = "PENDENTE";

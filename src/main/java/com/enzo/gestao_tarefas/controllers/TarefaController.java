@@ -19,7 +19,7 @@ public class TarefaController {
     public TarefaController(TarefaService service){ this.service = service; }
 
     @GetMapping
-    public ResponseEntity<List<Tarefa>> listar(@RequestParam String usuarioId){
+    public ResponseEntity<List<Tarefa>> listar(@RequestParam Long usuarioId){
         return ResponseEntity.ok(service.listarPorUsuario(usuarioId));
     }
 
@@ -29,13 +29,13 @@ public class TarefaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Tarefa> atualizar(@PathVariable String id,
+    public ResponseEntity<Tarefa> atualizar(@PathVariable Long id,
                                             @Valid @RequestBody AtualizaTarefaRequestDTO req){
         return ResponseEntity.ok(service.atualizar(id, req));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> excluir(@PathVariable String id){
+    public ResponseEntity<Void> excluir(@PathVariable Long id){
         service.excluir(id);
         return ResponseEntity.noContent().build();
     }

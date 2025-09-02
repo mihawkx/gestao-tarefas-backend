@@ -23,7 +23,7 @@ public class TarefaService {
         this.usuarioRepo = usuarioRepo;
     }
 
-    public List<Tarefa> listarPorUsuario(String usuarioId) {
+    public List<Tarefa> listarPorUsuario(Long usuarioId) {
         return tarefaRepo.findByUsuario_Id(usuarioId);
     }
 
@@ -40,8 +40,8 @@ public class TarefaService {
     }
 
     @Transactional
-    public Tarefa atualizar(String id, @Valid AtualizaTarefaRequestDTO req) {
-        Tarefa t = tarefaRepo.findById(id)
+    public Tarefa atualizar(Long id, @Valid AtualizaTarefaRequestDTO req) {
+        Tarefa t = tarefaRepo.findById(String.valueOf(id))
                 .orElseThrow(() -> new IllegalArgumentException("Tarefa não encontrada"));
         t.setTitulo(req.titulo());
         t.setDescricao(req.descricao());
@@ -50,8 +50,8 @@ public class TarefaService {
     }
 
     @Transactional
-    public void excluir(String id) {
-        if (!tarefaRepo.existsById(id)) throw new IllegalArgumentException("Tarefa não encontrada");
-        tarefaRepo.deleteById(id);
+    public void excluir(Long id) {
+        if (!tarefaRepo.existsById(String.valueOf(id))) throw new IllegalArgumentException("Tarefa não encontrada");
+        tarefaRepo.deleteById(String.valueOf(id));
     }
 }

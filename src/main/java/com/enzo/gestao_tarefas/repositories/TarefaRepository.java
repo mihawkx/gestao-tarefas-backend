@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface TarefaRepository extends JpaRepository<Tarefa, String> {
-    List<Tarefa> findByUsuario_Id(String usuarioId);
+    List<Tarefa> findByUsuario_Id(Long usuarioId);
 }

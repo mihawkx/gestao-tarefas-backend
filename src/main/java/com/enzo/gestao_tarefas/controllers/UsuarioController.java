@@ -21,7 +21,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Usuario> obter(@PathVariable String id){
+    public ResponseEntity<Usuario> obter(@PathVariable Long id){
         return repo.findById(id).map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
