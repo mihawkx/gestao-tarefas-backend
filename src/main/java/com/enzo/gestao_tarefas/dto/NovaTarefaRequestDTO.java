@@ -7,5 +7,5 @@ public record NovaTarefaRequestDTO(
     @NotBlank String titulo,
     String descricao,
     String status,
-    @NotNull Long usuarioId
+    @NotNull String usuarioId
 ){}

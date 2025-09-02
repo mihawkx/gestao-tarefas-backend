@@ -4,6 +4,6 @@ import com.enzo.gestao_tarefas.domain.Tarefa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
-public interface TarefaRepository extends JpaRepository<Tarefa, Long> {
-    List<Tarefa> findByUsuario_Id(Long usuarioId);
+public interface TarefaRepository extends JpaRepository<Tarefa, String> {
+    List<Tarefa> findByUsuario_Id(String usuarioId);
 }

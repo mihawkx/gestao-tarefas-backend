@@ -1,8 +1,4 @@
-<<<<<<<< Updated upstream:src/main/java/com/enzo/gestao_tarefas/UsuarioController.java
-package com.enzo.gestao_tarefas.controller;
-========
 package com.enzo.gestao_tarefas.controllers;
->>>>>>>> Stashed changes:src/main/java/com/enzo/gestao_tarefas/controllers/UsuarioController.java
 
 import com.enzo.gestao_tarefas.domain.Usuario;
 import com.enzo.gestao_tarefas.repositories.UsuarioRepository;
@@ -25,7 +21,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Usuario> obter(@PathVariable Long id){
+    public ResponseEntity<Usuario> obter(@PathVariable String id){
         return repo.findById(id).map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
